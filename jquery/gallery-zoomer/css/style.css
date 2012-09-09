@@ -13,8 +13,8 @@ body {
   }
   .stack {
     margin: 0 auto;
-    width: 576px;
-    width: 36rem;
+    width: 768px;
+    width: 48rem;
   }
 }
 /* Presentation styling */
