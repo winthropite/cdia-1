@@ -44,11 +44,17 @@ body {
 }
 /* Grid */
 #content .image-cropper {
+  background-image: -webkit-linear-gradient(transparent, rgba(0,0,0,0.2));
+  background-color: black;
   display: block;
   float: left;
   height: 100px;
   overflow: hidden;
+  position: relative;
   width: 32.33333%;
+}
+#content .image-cropper img {
+  position: relative;
 }
 #content .image-cropper:nth-child(3n+2),
 #content .image-cropper:nth-child(3n+3) {
@@ -56,4 +62,11 @@ body {
 }
 #content .image-cropper:nth-child(n+4) {
   margin-top: 5px;
+}
+.screen.active {
+  background-color: rgba(0, 0, 0, 0.66667);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 500;
 }
