@@ -42,3 +42,18 @@ body {
   padding-top: 2rem;
   text-shadow: 0 1px 0 black;
 }
+/* Grid */
+#content .image-cropper {
+  display: block;
+  float: left;
+  height: 100px;
+  overflow: hidden;
+  width: 32.33333%;
+}
+#content .image-cropper:nth-child(3n+2),
+#content .image-cropper:nth-child(3n+3) {
+  margin-left: 1.5%;
+}
+#content .image-cropper:nth-child(n+4) {
+  margin-top: 5px;
+}
