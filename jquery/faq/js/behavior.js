@@ -1,8 +1,16 @@
-$(document).ready(function (event) {
-  $questions = $('h2');
-  $questions.nextUntil('h2').hide();
-  $questions.click(function (event) {
-    var $q = $(this);
-    $q.nextUntil('h2').slideToggle();
+function pageLoad (event) {
+  var $h2 = $('h2');
+  $h2
+  .siblings()
+  .not('h2')
+  .hide();
+  $h2.click(function (event) {
+    var $this = $(this);
+    $this
+    .toggleClass('active')
+    .nextUntil('h2')
+    .slideToggle();
   });
-});
+}
+
+$(document).ready(pageLoad);
