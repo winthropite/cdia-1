@@ -106,12 +106,14 @@ body {
     opacity: 0;
     padding: 1em 1em 0 1em;
     position: absolute;
+    width: 100%;
+  }
+  .item.transition .details {
     -webkit-transition-property: height, opacity;
     -webkit-transition-duration: 0.25s;
     -webkit-transition-timing-function: ease-in;
-    width: 100%;
   }
-  .item:hover .details {
+  .item.transition:hover .details {
     height: 100%;
     opacity: 1;
   }
