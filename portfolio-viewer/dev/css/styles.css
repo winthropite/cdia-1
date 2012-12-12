@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+#page {
+  margin: 0 auto;
+  width: 20em;
+}
+
+.item dd {
+  margin-left: 0;
+}
+
+.item dt {
+  text-transform: uppercase;
+}
+.item dd + dt {
+  margin-top: 1em;
+}
+
