@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HTML Forms</title>
+    <meta charset="utf-8" />
+    <style>
+      [type="radio"] + label {
+        line-height: 1;
+        outline: 1px dotted red;
+        vertical-align: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="range" />
+      <label>Range</label>
+      <div class="radio-group">
+        <div class="type-radio">
+          <input type="radio" name="balloon" />
+          <label>Hot</label>
+        </div>
+        <label>this is a label</label>
+        <div class="type-radio">
+          <input type="radio" name="balloon" /><label>Cold</label>
+        </div>
+        <div class="type-radio">
+          <input type="radio" name="balloon" /><label>Meh</label>
+        </div>
+      </div>
+      <textarea>this is text</textarea>
+      <select>
+        <option>option 1</option>
+        <option>options 2</option>
+      </select>
+    </form>
+  </body>
+</html>
