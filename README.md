@@ -173,7 +173,7 @@ Image gallery zoomer
 ## Day 11
 
 + Building DOM elements with jQuery
-+ $(‘<div>’)
++ ```$(‘<div>’)```
 
 ## Day 12
 
