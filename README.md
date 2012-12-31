@@ -1,31 +1,4 @@
-Must read
-WD110 -- Web Interactivity 1
-Day 1
-Day 2
-Day 3
-Day 4
-Day 5
-Day 6
-Day 7
-Day 8
-WD111 -- Web Interactivity 2
-Day 9
-Day 10
-Day 11
-Day 12
-Day 13
-Day 14
-Day 15
-Day 16
-Final Project Requirements
-WD111 -- Web Interactivity 3
-Day 4
-Resources
-
-# Code examples
-
-https://github.com/jessebeach/cdia
-WD110 -- Web Interactivity 1
+# WD110 -- Web Interactivity 1
 
 ## Day 1
 
