@@ -4,16 +4,34 @@
   <meta charset="utf-8" />
 </head>
 <body>
-  <ul>
+  <h1>Instructions</h1>
+
+  <p>Complete all of the tasks listed below. You will edit this document directly in addition to creating a couple other files.</p>
+  <p>You may use your notes and the internet, as these things are available to you normally.</p>
+  <p>You may ask one question related to this evaluation of your instructor. Use this question wisely.</p>
+  <p>Please zip up all your files and email them to email address provided in class.</p>
+
+  <h1>Tasks</h1>
+
+  <ol>
     <li>Add an HTML5 doctype to this document.</li>
     <li>Add <a href="http://jquery.com/">jQuery</a> to the page. The version of jQuery on the page is ______.</li>
     <li>Add <a href="http://jqueryui.com/">jQuery UI</a> to the page.</li>
+    <li>Create a JavaScript document called <code>main.js</code> and link it to this page.</li>
+    <li>Create a CSS document called <code>style.css</code> and link it to this page.</li>
     <li>Change the body font of the document using a font from <a href="http://www.google.com/webfonts">Google Fonts</a></li>
-    <li>Style all of the first-level list item <code>li</code> elements (consomé, soup, etc.) in the list with the class <code>.root</code>. The items should be colored red and be italic.</li>
-    <li>In the <code>table</code> with id <code>thanksgiving</code>, style the third column cells (the "lettuce" column) with a light green background color.</li>
-    <li>In the <code>table</code> with id <code>thanksgiving</code>, style any hovered cell with a medium-green background color.</li>
-    <li>In the section element with the class <code>.article</code>, style any <code>p</code> tag that follows an <code>h2</code> tag with a top margin of 1.5em.</li>
-  </ul>
+    <li>In the file <code>style.css</code>, style all of the first-level list item <code>li</code> elements (consomé, soup, etc.) in the list with the class <code>.root</code>. The items should be colored red and be italic.</li>
+    <li>In the file <code>style.css</code>, with the <code>table</code> with id <code>thanksgiving</code>, style the third column cells (the "lettuce" column) with a light green background color.</li>
+    <li>In the file <code>style.css</code>, with the <code>table</code> with id <code>thanksgiving</code>, style any hovered cell with a medium-green background color.</li>
+    <li>In the file <code>style.css</code>, with the <code>section</code> element with the class <code>.article</code>, style any <code>p</code> tag that follows an <code>h2</code> tag with a top margin of 1.5em.</li>
+    <li>Use jQuery to determine how many <code>li</code> elements there are on the page and replace this underbar with the answer: _____</li>
+    <li>In the file <code>main.js</code>, select all the elements classed with <code>.details</code> on the page and make the font of these elements <code>small</code>.</li>
+    <li>In the file <code>main.js</code>, write a function that adds together two numbers and returns the result.</li>
+    <li>In the file <code>main.js</code>, invoke your number adding function with the numbers 25 and 68. Assign the result to a variable named <code>sum</code>.</li>
+    <li>In the file <code>main.js</code>, using jQuery, print the value of the variable <code>sum</code> to the element with the id <code>output</code>.</li>
+  </ol>
+
+  <hr />
 
   <!-- List -->
   <ul class="root">
@@ -179,9 +197,12 @@
     <p>lettuce lotus root turnip <em>greens</em> gram celtuce</p>
   </section>
 
-  <script>
+  <!-- Function output -->
 
-  </script>
+  <div>
+    <h3>Function output</h3>
+    <pre id="output"></pre>
+  </div>
 
 </body>
 </html>
