@@ -8,6 +8,7 @@ form {
   padding: 1em;
   width: 50%;
 }
+
 form.vertical label,
 form.vertical input,
 form.vertical select,
@@ -37,7 +38,7 @@ form.vertical > .file-element {
 }
 form.vertical > .actions {
   margin-left: 11em;
-  
+
 }
 form.vertical input[type="radio"],
 form.vertical input[type="checkbox"] {
