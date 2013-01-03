@@ -1,0 +1,27 @@
+.tabs {
+  position: relative;
+}
+
+.tabs .tab-links li {
+  display: block;
+  float: left;
+}
+
+.tabs .tab-links .active {
+  font-weight: bold;
+}
+
+.tabs .tab-links + * {
+  clear: left;
+}
+
+.tabs .tab-content {
+  display: none;
+  outline: 1px dotted red;
+  position: absolute;
+  top: 2em;
+}
+
+.tabs .tab-content.active {
+  display: block;
+}
