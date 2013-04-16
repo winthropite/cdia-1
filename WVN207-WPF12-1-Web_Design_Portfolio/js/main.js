@@ -3,7 +3,8 @@
 
   // Pass an anonymous function to the jQuery function to be run on document ready.
   $(function () {
-    // Find all of the anchor tags.
+    // Find all of the anchor tags. We are going to create a scroll to effect
+    // for links that point to anchors on the page.
     $('a')
       // Filter the set of anchor tags to those that have an href that points
       // to a hash.
@@ -43,7 +44,19 @@
           }
         });
       });
-  });
 
+    // Create a behavior associated with a media query boundary.
+    // Verify that matchMedia is a method on the window object.
+    if ('matchMedia' in window) {
+      var mql = window.matchMedia('(min-width: 45em)');
+      // Add a listener so we know when media query matches as the user resizes
+      // the screen.
+      mql.addListener(function (mql) {
+        console.log(mql.matches);
+      });
+      // Respond to the mediaQuery once right away.
+      console.log(mql.matches);
+    }
+  });
 
 }(jQuery));
