@@ -7,9 +7,8 @@
     <style>
 
       body {
-        background-color: red;
         font-family: 'Sanchez', serif;
-        font-size: 1.25em;
+        font-size: 1em;
         line-height: 1.3846;
       }
       dt {
@@ -33,58 +32,134 @@
         padding: 1em;
       }
 
-      @media screen and (min-width:24em) {
-        body {
-          background-color: blue;
-        }
+      .clearfix:after {
+        clear: left;
+        content: '';
+        display: block;
+        height: 0;
+        visibility: hidden;
+        width: 100%;
+      }
+
+      ul li a {
+        background-color: hsl(80, 61%, 50%);
+        display: inline-block;
+        -moz-transition:
+          width 1s,
+          background-color 1s;
+        -webkit-transition:
+          width 1s,
+          background-color 1s;
+        transition:
+          width 1s,
+          background-color 1s;
+        white-space: nowrap;
+        min-width: 5em;
+      }
+      ul li a:hover {
+        background-color: hsl(40, 61%, 50%);
+        width: 100%;
+      }
+
+      @media screen and (min-width:32em) {
         .page {
           margin: 0 auto;
-          width: 24em;
+          width: 32em;
         }
         .main {
           float: left;
-          width: 65%;
+          width: 50%;
         }
         .aside {
-          border-left: 1px solid black;
           float: left;
-          width: 35%;
-          background-color: orange;
+          width: 50%;
+        }
+        .aside .block {
+          background-color: hsla(170, 29%, 88%, 1);
+          border-radius: 6px;
+          padding: 0 1em;
         }
       }
 
       @media screen and (min-width:48em) {
         body {
-          background-color: yellow;
           font-size: 1em;
           line-height: 2;
         }
         .page {
           width: 48em ;
         }
+        .main {
+          float: left;
+          width: 65%;
+        }
+        .aside {
+          float: left;
+          width: 25%;
+        }
       }
     </style>
   </head>
   <body>
     <div class="page">
+
+      <h1>Resume for Jesse Beach</h1>
+
+      <ul class="nav" role="navigation">
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="#resume">Resume</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+      </ul>
       <div role="main" class="main">
-        <h1>Resume for Jesse Beach</h1>
+        <div id="portfolio" class="tile">
 
-        <h2>Experience</h2>
+          <h2>Projects</h2>
 
-        <p>Before they sold out dreamcatcher authentic, umami retro pop-up hoodie craft beer meggings hella kale chips food truck. Pickled squid freegan tonx. Vice intelligentsia banjo portland DIY deep v. Salvia skateboard you probably haven't heard of them viral cardigan scenester, kale chips pop-up polaroid art party meh sustainable 8-bit fixie quinoa. Cred bushwick four loko, jean shorts blue bottle Austin fanny pack. Sriracha tumblr four loko, echo park umami blue bottle narwhal cliche single-origin coffee. Flexitarian 3 wolf moon VHS you probably haven't heard of them church-key vinyl, gentrify 90's pickled meh skateboard portland pug retro keytar</p>
+          <p>Before they sold out dreamcatcher authentic, umami retro pop-up hoodie craft beer meggings hella kale chips food truck. Pickled squid freegan tonx. Vice intelligentsia banjo portland DIY deep v. Salvia skateboard you probably haven't heard of them viral cardigan scenester, kale chips pop-up polaroid art party meh sustainable 8-bit fixie quinoa. Cred bushwick four loko, jean shorts blue bottle Austin fanny pack. Sriracha tumblr four loko, echo park umami blue bottle narwhal cliche single-origin coffee. Flexitarian 3 wolf moon VHS you probably haven't heard of them church-key vinyl, gentrify 90's pickled meh skateboard portland pug retro keytar</p>
 
-        <p>Authentic viral narwhal, whatever aesthetic cliche 8-bit artisan ethnic typewriter. Banjo pug vegan butcher swag. Actually pork belly tumblr, ethical banh mi messenger bag iphone selvage keffiyeh retro disrupt godard fanny pack freegan. Fashion axe marfa before they sold out selvage 3 wolf moon. Odd future cred post-ironic, etsy fanny pack chillwave farm-to-table street art pug neutra swag. Meh squid thundercats, occupy pug sartorial high life retro tumblr flexitarian. Before they sold out salvia tattooed neutra freegan, locavore cray.</p>
+          <p>Authentic viral narwhal, whatever aesthetic cliche 8-bit artisan ethnic typewriter. Banjo pug vegan butcher swag. Actually pork belly tumblr, ethical banh mi messenger bag iphone selvage keffiyeh retro disrupt godard fanny pack freegan. Fashion axe marfa before they sold out selvage 3 wolf moon. Odd future cred post-ironic, etsy fanny pack chillwave farm-to-table street art pug neutra swag. Meh squid thundercats, occupy pug sartorial high life retro tumblr flexitarian. Before they sold out salvia tattooed neutra freegan, locavore cray.</p>
 
-        <p>Literally echo park artisan, odd future Austin brunch mustache sustainable carles deep v etsy blog fingerstache church-key. Mixtape fap hashtag, mcsweeney's semiotics 90's meh cray vice wolf ethnic mlkshk vinyl hella thundercats. Wes anderson hoodie chambray pinterest mumblecore. Bushwick put a bird on it tofu terry richardson bicycle rights marfa. Plaid salvia wayfarers, bespoke ugh banjo leggings single-origin coffee irony mumblecore lomo pickled you probably haven't heard of them helvetica pitchfork. Vinyl aesthetic irony, echo park odd future pork belly vice banh mi umami literally pug neutra messenger bag tumblr flannel. Leggings pinterest terry richardson, gastropub squid put a bird on it try-hard PBR.</p>
+          <p>Literally echo park artisan, odd future Austin brunch mustache sustainable carles deep v etsy blog fingerstache church-key. Mixtape fap hashtag, mcsweeney's semiotics 90's meh cray vice wolf ethnic mlkshk vinyl hella thundercats. Wes anderson hoodie chambray pinterest mumblecore. Bushwick put a bird on it tofu terry richardson bicycle rights marfa. Plaid salvia wayfarers, bespoke ugh banjo leggings single-origin coffee irony mumblecore lomo pickled you probably haven't heard of them helvetica pitchfork. Vinyl aesthetic irony, echo park odd future pork belly vice banh mi umami literally pug neutra messenger bag tumblr flannel. Leggings pinterest terry richardson, gastropub squid put a bird on it try-hard PBR.</p>
 
-        <p>Leggings four loko cred deep v, lomo YOLO fashion axe sriracha meggings ethnic hashtag chillwave squid. Brooklyn synth neutra wolf meh pitchfork mcsweeney's, wayfarers before they sold out bushwick. Actually +1 stumptown, bicycle rights narwhal umami disrupt meh flannel vegan 8-bit freegan fingerstache PBR. Terry richardson tofu mumblecore chambray meggings. Selvage echo park semiotics wolf DIY typewriter. Intelligentsia forage deep v, wes anderson salvia lomo dreamcatcher etsy squid. Flannel fingerstache thundercats helvetica hoodie organic.</p>
+          <p>Leggings four loko cred deep v, lomo YOLO fashion axe sriracha meggings ethnic hashtag chillwave squid. Brooklyn synth neutra wolf meh pitchfork mcsweeney's, wayfarers before they sold out bushwick. Actually +1 stumptown, bicycle rights narwhal umami disrupt meh flannel vegan 8-bit freegan fingerstache PBR. Terry richardson tofu mumblecore chambray meggings. Selvage echo park semiotics wolf DIY typewriter. Intelligentsia forage deep v, wes anderson salvia lomo dreamcatcher etsy squid. Flannel fingerstache thundercats helvetica hoodie organic.</p>
+        </div>
+        <div id="about" class="tile">
+          <h2>About</h2>
+
+          <p>Before they sold out dreamcatcher authentic, umami retro pop-up hoodie craft beer meggings hella kale chips food truck. Pickled squid freegan tonx. Vice intelligentsia banjo portland DIY deep v. Salvia skateboard you probably haven't heard of them viral cardigan scenester, kale chips pop-up polaroid art party meh sustainable 8-bit fixie quinoa. Cred bushwick four loko, jean shorts blue bottle Austin fanny pack. Sriracha tumblr four loko, echo park umami blue bottle narwhal cliche single-origin coffee. Flexitarian 3 wolf moon VHS you probably haven't heard of them church-key vinyl, gentrify 90's pickled meh skateboard portland pug retro keytar</p>
+          <p>Authentic viral narwhal, whatever aesthetic cliche 8-bit artisan ethnic typewriter. Banjo pug vegan butcher swag. Actually pork belly tumblr, ethical banh mi messenger bag iphone selvage keffiyeh retro disrupt godard fanny pack freegan. Fashion axe marfa before they sold out selvage 3 wolf moon. Odd future cred post-ironic, etsy fanny pack chillwave farm-to-table street art pug neutra swag. Meh squid thundercats, occupy pug sartorial high life retro tumblr flexitarian. Before they sold out salvia tattooed neutra freegan, locavore cray.</p>
+          <p>Literally echo park artisan, odd future Austin brunch mustache sustainable carles deep v etsy blog fingerstache church-key. Mixtape fap hashtag, mcsweeney's semiotics 90's meh cray vice wolf ethnic mlkshk vinyl hella thundercats. Wes anderson hoodie chambray pinterest mumblecore. Bushwick put a bird on it tofu terry richardson bicycle rights marfa. Plaid salvia wayfarers, bespoke ugh banjo leggings single-origin coffee irony mumblecore lomo pickled you probably haven't heard of them helvetica pitchfork. Vinyl aesthetic irony, echo park odd future pork belly vice banh mi umami literally pug neutra messenger bag tumblr flannel. Leggings pinterest terry richardson, gastropub squid put a bird on it try-hard PBR.</p>
+          <p>Leggings four loko cred deep v, lomo YOLO fashion axe sriracha meggings ethnic hashtag chillwave squid. Brooklyn synth neutra wolf meh pitchfork mcsweeney's, wayfarers before they sold out bushwick. Actually +1 stumptown, bicycle rights narwhal umami disrupt meh flannel vegan 8-bit freegan fingerstache PBR. Terry richardson tofu mumblecore chambray meggings. Selvage echo park semiotics wolf DIY typewriter. Intelligentsia forage deep v, wes anderson salvia lomo dreamcatcher etsy squid. Flannel fingerstache thundercats helvetica hoodie organic.</p>
+
+          <p>Before they sold out dreamcatcher authentic, umami retro pop-up hoodie craft beer meggings hella kale chips food truck. Pickled squid freegan tonx. Vice intelligentsia banjo portland DIY deep v. Salvia skateboard you probably haven't heard of them viral cardigan scenester, kale chips pop-up polaroid art party meh sustainable 8-bit fixie quinoa. Cred bushwick four loko, jean shorts blue bottle Austin fanny pack. Sriracha tumblr four loko, echo park umami blue bottle narwhal cliche single-origin coffee. Flexitarian 3 wolf moon VHS you probably haven't heard of them church-key vinyl, gentrify 90's pickled meh skateboard portland pug retro keytar</p>
+          <p>Authentic viral narwhal, whatever aesthetic cliche 8-bit artisan ethnic typewriter. Banjo pug vegan butcher swag. Actually pork belly tumblr, ethical banh mi messenger bag iphone selvage keffiyeh retro disrupt godard fanny pack freegan. Fashion axe marfa before they sold out selvage 3 wolf moon. Odd future cred post-ironic, etsy fanny pack chillwave farm-to-table street art pug neutra swag. Meh squid thundercats, occupy pug sartorial high life retro tumblr flexitarian. Before they sold out salvia tattooed neutra freegan, locavore cray.</p>
+          <p>Literally echo park artisan, odd future Austin brunch mustache sustainable carles deep v etsy blog fingerstache church-key. Mixtape fap hashtag, mcsweeney's semiotics 90's meh cray vice wolf ethnic mlkshk vinyl hella thundercats. Wes anderson hoodie chambray pinterest mumblecore. Bushwick put a bird on it tofu terry richardson bicycle rights marfa. Plaid salvia wayfarers, bespoke ugh banjo leggings single-origin coffee irony mumblecore lomo pickled you probably haven't heard of them helvetica pitchfork. Vinyl aesthetic irony, echo park odd future pork belly vice banh mi umami literally pug neutra messenger bag tumblr flannel. Leggings pinterest terry richardson, gastropub squid put a bird on it try-hard PBR.</p>
+          <p>Leggings four loko cred deep v, lomo YOLO fashion axe sriracha meggings ethnic hashtag chillwave squid. Brooklyn synth neutra wolf meh pitchfork mcsweeney's, wayfarers before they sold out bushwick. Actually +1 stumptown, bicycle rights narwhal umami disrupt meh flannel vegan 8-bit freegan fingerstache PBR. Terry richardson tofu mumblecore chambray meggings. Selvage echo park semiotics wolf DIY typewriter. Intelligentsia forage deep v, wes anderson salvia lomo dreamcatcher etsy squid. Flannel fingerstache thundercats helvetica hoodie organic.</p>
+        </div>
+        <div id="resume" class="tile">
+          <h2>Resume</h2>
+
+          <p>Before they sold out dreamcatcher authentic, umami retro pop-up hoodie craft beer meggings hella kale chips food truck. Pickled squid freegan tonx. Vice intelligentsia banjo portland DIY deep v. Salvia skateboard you probably haven't heard of them viral cardigan scenester, kale chips pop-up polaroid art party meh sustainable 8-bit fixie quinoa. Cred bushwick four loko, jean shorts blue bottle Austin fanny pack. Sriracha tumblr four loko, echo park umami blue bottle narwhal cliche single-origin coffee. Flexitarian 3 wolf moon VHS you probably haven't heard of them church-key vinyl, gentrify 90's pickled meh skateboard portland pug retro keytar</p>
+          <p>Authentic viral narwhal, whatever aesthetic cliche 8-bit artisan ethnic typewriter. Banjo pug vegan butcher swag. Actually pork belly tumblr, ethical banh mi messenger bag iphone selvage keffiyeh retro disrupt godard fanny pack freegan. Fashion axe marfa before they sold out selvage 3 wolf moon. Odd future cred post-ironic, etsy fanny pack chillwave farm-to-table street art pug neutra swag. Meh squid thundercats, occupy pug sartorial high life retro tumblr flexitarian. Before they sold out salvia tattooed neutra freegan, locavore cray.</p>
+          <p>Literally echo park artisan, odd future Austin brunch mustache sustainable carles deep v etsy blog fingerstache church-key. Mixtape fap hashtag, mcsweeney's semiotics 90's meh cray vice wolf ethnic mlkshk vinyl hella thundercats. Wes anderson hoodie chambray pinterest mumblecore. Bushwick put a bird on it tofu terry richardson bicycle rights marfa. Plaid salvia wayfarers, bespoke ugh banjo leggings single-origin coffee irony mumblecore lomo pickled you probably haven't heard of them helvetica pitchfork. Vinyl aesthetic irony, echo park odd future pork belly vice banh mi umami literally pug neutra messenger bag tumblr flannel. Leggings pinterest terry richardson, gastropub squid put a bird on it try-hard PBR.</p>
+          <p>Leggings four loko cred deep v, lomo YOLO fashion axe sriracha meggings ethnic hashtag chillwave squid. Brooklyn synth neutra wolf meh pitchfork mcsweeney's, wayfarers before they sold out bushwick. Actually +1 stumptown, bicycle rights narwhal umami disrupt meh flannel vegan 8-bit freegan fingerstache PBR. Terry richardson tofu mumblecore chambray meggings. Selvage echo park semiotics wolf DIY typewriter. Intelligentsia forage deep v, wes anderson salvia lomo dreamcatcher etsy squid. Flannel fingerstache thundercats helvetica hoodie organic.</p>
+
+          <p>Before they sold out dreamcatcher authentic, umami retro pop-up hoodie craft beer meggings hella kale chips food truck. Pickled squid freegan tonx. Vice intelligentsia banjo portland DIY deep v. Salvia skateboard you probably haven't heard of them viral cardigan scenester, kale chips pop-up polaroid art party meh sustainable 8-bit fixie quinoa. Cred bushwick four loko, jean shorts blue bottle Austin fanny pack. Sriracha tumblr four loko, echo park umami blue bottle narwhal cliche single-origin coffee. Flexitarian 3 wolf moon VHS you probably haven't heard of them church-key vinyl, gentrify 90's pickled meh skateboard portland pug retro keytar</p>
+          <p>Authentic viral narwhal, whatever aesthetic cliche 8-bit artisan ethnic typewriter. Banjo pug vegan butcher swag. Actually pork belly tumblr, ethical banh mi messenger bag iphone selvage keffiyeh retro disrupt godard fanny pack freegan. Fashion axe marfa before they sold out selvage 3 wolf moon. Odd future cred post-ironic, etsy fanny pack chillwave farm-to-table street art pug neutra swag. Meh squid thundercats, occupy pug sartorial high life retro tumblr flexitarian. Before they sold out salvia tattooed neutra freegan, locavore cray.</p>
+          <p>Literally echo park artisan, odd future Austin brunch mustache sustainable carles deep v etsy blog fingerstache church-key. Mixtape fap hashtag, mcsweeney's semiotics 90's meh cray vice wolf ethnic mlkshk vinyl hella thundercats. Wes anderson hoodie chambray pinterest mumblecore. Bushwick put a bird on it tofu terry richardson bicycle rights marfa. Plaid salvia wayfarers, bespoke ugh banjo leggings single-origin coffee irony mumblecore lomo pickled you probably haven't heard of them helvetica pitchfork. Vinyl aesthetic irony, echo park odd future pork belly vice banh mi umami literally pug neutra messenger bag tumblr flannel. Leggings pinterest terry richardson, gastropub squid put a bird on it try-hard PBR.</p>
+          <p>Leggings four loko cred deep v, lomo YOLO fashion axe sriracha meggings ethnic hashtag chillwave squid. Brooklyn synth neutra wolf meh pitchfork mcsweeney's, wayfarers before they sold out bushwick. Actually +1 stumptown, bicycle rights narwhal umami disrupt meh flannel vegan 8-bit freegan fingerstache PBR. Terry richardson tofu mumblecore chambray meggings. Selvage echo park semiotics wolf DIY typewriter. Intelligentsia forage deep v, wes anderson salvia lomo dreamcatcher etsy squid. Flannel fingerstache thundercats helvetica hoodie organic.</p>
+        </div>
       </div>
       <aside class="aside">
-
+        <div class="block">
           <h2>Contact information</h2>
-
-          <dl>
+          <dl class="clearfix">
             <dt>Name</dt>
             <dd>Jesse Beach</dd>
             <dt>Position</dt>
@@ -92,7 +167,7 @@
             <dt>Location</dt>
             <dd>Boston, MA</dd>
           </dl>
-
+        </div>
       </aside>
     </div>
   </body>
