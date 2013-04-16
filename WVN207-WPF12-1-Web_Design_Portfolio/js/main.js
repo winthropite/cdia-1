@@ -24,6 +24,9 @@
         // Otherwise return false.
         return href && /^#/i.test(href);
       })
+      // We could have also just done $('a[href^="#"]') instead
+      // of all that filter and regular expression stuff;
+
       // Attach an on-click handler.
       .on('click', function (event) {
         // Stop the window from scrolling immediately to the element that corresponds
