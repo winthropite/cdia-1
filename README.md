@@ -241,6 +241,66 @@ Image gallery zoomer
 + Custom
 + Turn it into a jQuery plugin
 
+# WVN 318 -- jQuery Plugins
+
+## Project
+
+A photo gallery plugin that scatters photos like they would when strewn on a surface.
+
++ Animate the movement and provide a means to pause and play and animation.
++ Set timers on the plugin function
++ Create instances of the function on the fn object when invoked.
+
+## Day 1
+
++ Review CSS selectors
++ Review JavaScript
+++ typeof
+++ var
+++ function
+++ concatenation
+++ objects vs. arrays
++++ Show the JS WAT video
+++ Looping
++++ Array looping
++++ Object looping
+
+## Day 2
+
++ Review jQuery selection.
+++ 'Select and do' library.
++ Explore the jQuery function
+++ Look through the unminified file
+++ Look at some methods in the api.jquery.com docs. Find them declared in the source code.
+++ Find the fn property
++ Introduce the IIFE.
+++ Discuss function scope vs. block scope
+++ Show an example of variable hoisting.
++ Add a function to the fn object.
+++ Call the function.
++ Discuss what 'this' is.
++ Introduce the function.call method
++ Introduce the function.apply method
++ Produce a chainable jQuery custom method
++ Discuss chaining
++ Build a basic plugin
+++ Turn all of the links on the page red.
+++ Provide options through your plugin to specify color to turn the links.
+++ Compare this to jQuery.css() and discuss how this method might work.
+
+## Day 3
+
++ Event binding
+++ $.on
+++ $.off
+++ Event namespacing
++ Event delegation
++ Capture user interactions
+++ click
+++ mouse
+++ keyboard
++
+
 # Resources
 
 + http://api.jquery.com

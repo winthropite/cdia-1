@@ -55,7 +55,10 @@
       // Add a listener so we know when media query matches as the user resizes
       // the screen.
       mql.addListener(function (mql) {
-        console.log(mql.matches);
+        if (mql.matches) {
+          var $contact = $('#contact').detach();
+          $contact.after('#top-nav');
+        }
       });
       // Respond to the mediaQuery once right away.
       console.log(mql.matches);
