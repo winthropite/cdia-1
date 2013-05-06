@@ -230,18 +230,7 @@ Image gallery zoomer
 + Use a grid-base layout like 960.gs
 + Design is important but not critical. A site with well-formatted, thought-out code and a simple design will do much better than a flashy site with messy code for this class.
 
-# WD111 -- Web Interactivity 3
-
-## Day 4
-
-+ Building an accordion
-+ jQuery UI
-+ IIFE - Immediately invoking function expressions
-+ http://benalman.com/news/2010/11/immediately-invoked-function-expression/
-+ Custom
-+ Turn it into a jQuery plugin
-
-# WVN 318 -- jQuery Plugins
+# WD111 / WVN 318 -- jQuery Plugins
 
 ## Project
 
