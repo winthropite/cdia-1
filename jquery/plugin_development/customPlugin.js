@@ -8,6 +8,7 @@
 }(jQuery));
 
 // Invoke the function.
+// This could be moved to its own file, like one named main.js
 (function ($) {
 
   $(function () {
