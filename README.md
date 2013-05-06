@@ -74,18 +74,18 @@
 + Invoke the function foo
 
 + Introduction to jQuery!
-++ What is jQuery, what do we use it for?
-++ It’s a library
-++ We use it to avoid the inconsistencies between JavaScript implementations across browsers and to speed up our development.
-++ John Resig started the jQuery project in 2006 (here in Boston), but since then many many developers have contributed to it.
-++ Do other libraries exist?
-++ How do I get jQuery on my site?
-+++ CDN
-+++ File include
-++ What’s the minified vs. the development file?
-++ Troubleshooting common problems.
-++ Is jQuery loaded? What version is loaded? Is jQuery loaded before scripts that require it?
-++ Selecting HTML elements in the DOM. Finally, all our CSS selector writing exercises make sense!
+  + What is jQuery, what do we use it for?
+  + It’s a library
+  + We use it to avoid the inconsistencies between JavaScript implementations across browsers and to speed up our development.
+  + John Resig started the jQuery project in 2006 (here in Boston), but since then many many developers have contributed to it.
+  + Do other libraries exist?
+  + How do I get jQuery on my site?
+    + CDN
+    + File include
+  + What’s the minified vs. the development file?
+  + Troubleshooting common problems.
+  + Is jQuery loaded? What version is loaded? Is jQuery loaded before scripts that require it?
+  + Selecting HTML elements in the DOM. Finally, all our CSS selector writing exercises make sense!
 + jQuery selector Duckhunt!
 + HTML objects and jQuery objects, what’s the difference?
 + HTML objects are native browser objects
@@ -93,7 +93,7 @@
 + Using jQuery API documentation
 
 + jQuery object manipulation
-++ addClass, removeClass, toggleClass, attr, removeAttr
+  + addClass, removeClass, toggleClass, attr, removeAttr
 
 Let’s build something!
 Image gallery zoomer
@@ -101,28 +101,28 @@ Image gallery zoomer
 ## Day 6
 
 + Exercises
-++ Select all of the images on the page and save them to var $img
-++ How many images are on the page?
-++ Add an attribute
-++ Remove an attribute
-++ hide elements
-++ show elements
-++ slide elements up; slide elements down
-++ chain the up/down sliding
-++ traversing: next, prev, parent, children, siblings
-++ manipulation: attr, class
-++ Creating elements with $()
-++ Continue building our gallery zoomer
-++ Wrap each image in a link
-++ Select all elements with a src attribute
-++ Set the href of the link to the src of the image
-++ Set the width and height of the images to a constant size
-++ Wrap the images in a div
-++ Center the images in the div
-++ Crop the overflow
-++ On hover, zoom the image; on hover out, return the image to its original scale
-++ Put a description under each image
-++ make the description visible on hover of the image
+  + Select all of the images on the page and save them to var $img
+  + How many images are on the page?
+  + Add an attribute
+  + Remove an attribute
+  + hide elements
+  + show elements
+  + slide elements up; slide elements down
+  + chain the up/down sliding
+  + traversing: next, prev, parent, children, siblings
+  + manipulation: attr, class
+  + Creating elements with $()
+  + Continue building our gallery zoomer
+  + Wrap each image in a link
+  + Select all elements with a src attribute
+  + Set the href of the link to the src of the image
+  + Set the width and height of the images to a constant size
+  + Wrap the images in a div
+  + Center the images in the div
+  + Crop the overflow
+  + On hover, zoom the image; on hover out, return the image to its original scale
+  + Put a description under each image
+  + make the description visible on hover of the image
 + Positioning and floating
 + float
 + position: static, relative, absolute, fixed
@@ -131,7 +131,7 @@ Image gallery zoomer
 + What is a rem?
 + What is an ex?
 + Further study
-++ http://learnjquery.tutsplus.com/
+  + http://learnjquery.tutsplus.com/
 
 ## Day 7
 
@@ -141,8 +141,8 @@ Image gallery zoomer
 + (function ($) {}( /* code */));
 
 + Final project check-in
-++ Build the front page of your final project in a wireframe using a grid system
-++ Review of the prior classes before jumping into jQuery and plugins.
+  + Build the front page of your final project in a wireframe using a grid system
+  + Review of the prior classes before jumping into jQuery and plugins.
 
 ## Day 8
 
@@ -255,50 +255,50 @@ A photo gallery plugin that scatters photos like they would when strewn on a sur
 
 + Review CSS selectors
 + Review JavaScript
-++ typeof
-++ var
-++ function
-++ concatenation
-++ objects vs. arrays
-+++ Show the JS WAT video
-++ Looping
-+++ Array looping
-+++ Object looping
+  + typeof
+  + var
+  + function
+  + concatenation
+  + objects vs. arrays
+    + Show the JS WAT video
+  + Looping
+    + Array looping
+    + Object looping
 
 ## Day 2
 
 + Review jQuery selection.
-++ 'Select and do' library.
+  + 'Select and do' library.
 + Explore the jQuery function
-++ Look through the unminified file
-++ Look at some methods in the api.jquery.com docs. Find them declared in the source code.
-++ Find the fn property
+  + Look through the unminified file
+  + Look at some methods in the api.jquery.com docs. Find them declared in the source code.
+  + Find the fn property
 + Introduce the IIFE.
-++ Discuss function scope vs. block scope
-++ Show an example of variable hoisting.
+  + Discuss function scope vs. block scope
+  + Show an example of variable hoisting.
 + Add a function to the fn object.
-++ Call the function.
+  + Call the function.
 + Discuss what 'this' is.
 + Introduce the function.call method
 + Introduce the function.apply method
 + Produce a chainable jQuery custom method
 + Discuss chaining
 + Build a basic plugin
-++ Turn all of the links on the page red.
-++ Provide options through your plugin to specify color to turn the links.
-++ Compare this to jQuery.css() and discuss how this method might work.
+  + Turn all of the links on the page red.
+  + Provide options through your plugin to specify color to turn the links.
+  + Compare this to jQuery.css() and discuss how this method might work.
 
 ## Day 3
 
 + Event binding
-++ $.on
-++ $.off
-++ Event namespacing
+  + $.on
+  + $.off
+  + Event namespacing
 + Event delegation
 + Capture user interactions
-++ click
-++ mouse
-++ keyboard
+  + click
+  + mouse
+  + keyboard
 +
 
 # Resources
