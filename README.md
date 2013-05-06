@@ -295,7 +295,7 @@ A photo gallery plugin that scatters photos like they would when strewn on a sur
   + click
   + mouse
   + keyboard
-+ Build a autocomplete widget (?)
++ Build an autocomplete widget (?)
 
 ## Day 5
 
@@ -303,9 +303,29 @@ A photo gallery plugin that scatters photos like they would when strewn on a sur
 
 ## Day 6
 
++ One namespace, many methods
+  + Function.apply
+  + Function.call
++ this
+  + What is this?
+  + function binding
+  + why do we need this?
+    + setTimeout
+  + event.target when we bind a function to something other than the triggering element
++ Mock up an operations list of an entity.
+  + Save
+  + Configure
+  + Delete
+
 ## Day 7
 
++ Build a page scrolling plugin
+
 ## Day 8
+
++ Custom :pseudos
++ Life after jQuery.
+  + document.querySelectorAll
 
 # Resources
 
