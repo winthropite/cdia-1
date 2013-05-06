@@ -148,7 +148,7 @@ Image gallery zoomer
 
 # WD111 -- Web Interactivity 2
 
-## Day 9
+## Day 1
 
 + jQuery methods
 + css
@@ -164,18 +164,18 @@ Image gallery zoomer
 + Form elements to supply styling values
 + Build a click-capture example with a moving box.
 
-## Day 10
+## Day 2
 
 + Animation with jQuery
 + slideUp, slideDown
 + animate()
 
-## Day 11
+## Day 3
 
 + Building DOM elements with jQuery
 + ```$(‘<div>’)```
 
-## Day 12
+## Day 4
 
 + Introduction to plugins
 + What is modularity (superficial overview)
@@ -186,20 +186,20 @@ Image gallery zoomer
 + Ketchup plugin
 + http://demos.usejquery.com/ketchup-plugin/
 
-## Day 13
+## Day 5
 
 + Plugins continued
 + Image rotator, cycle plugin
 + http://jquery.malsup.com/cycle/
 
-## Day 14
+## Day 6
 
 + Plugins continued
 + Creatin a lightbox, jQuery lightbox plugin
 + http://leandrovieira.com/projects/jquery/lightbox/
 + http://www.woothemes.com/flexslider/
 
-## Day 15
+## Day 7
 
 + Architecting your JavaScript file
 + How to play well with other developers
@@ -210,7 +210,7 @@ Image gallery zoomer
 
 + Project time
 
-## Day 16
+## Day 8
 
 + Responsive web design
 + Final project review session
