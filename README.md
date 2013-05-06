@@ -290,6 +290,13 @@ A photo gallery plugin that scatters photos like they would when strewn on a sur
 
 ## Day 3
 
++ Build a [custom plugin](https://github.com/jessebeach/cdia/tree/gh-pages/jquery/plugin_development)
++ Talk about [IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
++ Discuss the [jQuery fn property](http://docs.jquery.com/Plugins/Authoring)
+  + Return this - give back what was given to you to maintain chainability.
+
+## Day 4
+
 + Event binding
   + $.on
   + $.off
@@ -299,7 +306,11 @@ A photo gallery plugin that scatters photos like they would when strewn on a sur
   + click
   + mouse
   + keyboard
-+
++ Build a autocomplete widget (?)
+
+## Day 5
+
++ Form validation.
 
 # Resources
 
