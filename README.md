@@ -301,6 +301,12 @@ A photo gallery plugin that scatters photos like they would when strewn on a sur
 
 + Form validation.
 
+## Day 6
+
+## Day 7
+
+## Day 8
+
 # Resources
 
 + http://api.jquery.com
