@@ -1,8 +1,9 @@
-(function ($, undefined) {
+(function ($) {
 
-  // Use the plugin.
   $(function () {
-    $('span[data-email]').customPlugin();
+    $('#petitions').petitionsListMaker(petitions.results);
   });
+
+
 
 }(jQuery));
