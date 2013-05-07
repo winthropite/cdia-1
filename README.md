@@ -287,6 +287,7 @@ A photo gallery plugin that scatters photos like they would when strewn on a sur
 ## Day 4
 
 + Event binding
+  + $.click()
   + $.on
   + $.off
   + Event namespacing

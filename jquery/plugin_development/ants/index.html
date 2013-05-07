@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <title>Autocomplete</title>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      margin: 0;
+    }
+    #ants > * {
+      background-color: black;
+      height: 50px;
+      position: absolute;
+      width: 50px;
+    }
+  </style>
+  <script src="jquery-1.9.1.js"></script>
+  <script>
+    (function ($){
+
+      function makeAnts (options) {
+
+        options = $.extend({
+          speed: 2
+        }, (options || {}));
+
+        var speed = options.speed;
+
+        this.on('click', '*', function (event) {
+          makeAnts.activeAnt = event.target;
+        });
+
+        $(document).on('keydown', function (event) {
+          var key = event.keyCode;
+          if (makeAnts.activeAnt && $.inArray(key, [37,38,39,40]) > -1) {
+            var $ant = $(makeAnts.activeAnt);
+            var edge = ($.inArray(key, [37, 39]) > -1) ? 'left' : 'top';
+            var offset = $ant.offset()[edge];
+            $ant.css(edge, ($.inArray(key, [37, 38]) > -1) ? offset - (1 * speed) : offset + (1 * speed));
+          }
+        });
+
+        return this;
+      };
+
+      makeAnts.activeAnt;
+
+      $.fn.ants = makeAnts;
+
+      $(function () {
+        $('#ants').ants({
+          speed: 10
+        });
+      });
+    }(jQuery));
+  </script>
+</head>
+<body>
+  <div id="ants">
+    <div>ant</div>
+    <div>ant</div>
+    <div>ant</div>
+    <div>ant</div>
+    <div>ant</div>
+    <div>ant</div>
+    <div>ant</div>
+    <div>ant</div>
+    <div>ant</div>
+    <div>ant</div>
+  </div>
+</body>
+</html>
