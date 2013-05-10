@@ -1,5 +1,5 @@
 (function ($){
   $(function () {
-    $('#tabs').tabs();
+    $('.my-tabs').tabs();
   });
 }(jQuery));
