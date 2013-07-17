@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+  <title>Data structures</title>
+  <meta charset="utf-8" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>
+    var petitions = {"metadata":{"responseInfo":{"status":200,"developerMessage":"OK"},"executionTime":0.01},"results":[{"id":"50cb6d2ba9a0b1c52e000017","type":"petition","title":"Immediately address the issue of gun control through the introduction of legislation in Congress.","body":"The goal of this petition is to force the Obama Administration to produce legislation that limits access to guns.  While a national dialogue is critical, laws are the only means in which we can reduce the number of people murdered in gun related deaths.\r\n\r\nPowerful lobbying groups allow the ownership of guns to reach beyond the Constitution's intended purpose of the right to bear arms.  Therefore, Congress must act on what is stated law, and face the reality that access to firearms reaches beyond what the Second Amendment intends to achieve.  \r\n\r\nThe signatures on this petition represent a collective demand for a bipartisan discussion resulting in a set of laws that regulates how a citizen obtains a gun.","issues":[{"id":"4","name":"Civil Rights and Liberties"},{"id":"22","name":"Firearms"}],"signatureThreshold":25000,"signatureCount":197073,"signaturesNeeded":0,"url":"https://petitions.whitehouse.gov/petition/immediately-address-issue-gun-control-through-introduction-legislation-congress/2tgcXzQC","deadline":1358101035,"status":"responded","response":{"id":"681","url":"https://petitions.whitehouse.gov/response/message-president-obama-about-your-petition-reducing-gun-violence","associationTime":"1355963976"},"created":1355509035}]};
+    var a = {
+      apples: 'green',
+      bananas: 100,
+      peaches: {},
+      'pears': 'icky',
+      'veggies': [
+        'pepper',
+        'tomato',
+        'carrot'
+      ],
+      'grocery-list': [
+        'butter',
+        'eggs',
+        'salami'
+      ]
+    };
+
+    var b = [
+      'hotdogs',
+      'burgers',
+      'watermelon',
+      {
+        grill: 'weber',
+        fuel: 'propane',
+        tools: [
+          'spatula',
+          'lighter-fluid',
+          {
+            guestslist: [
+              'Bork',
+              'Spielberg'
+            ]
+          }
+        ]
+      }
+    ];
+    var c = [
+      'sleeping',
+      'sleeping more',
+      'naps',
+      'power naps',
+      'coffee'
+    ];
+
+    for (var i = 0; i < c.length; i++) {
+      console.log('the curent index is: ' + i);
+      var output = c[i];
+      console.log(output);
+    }
+
+
+
+  </script>
+  <style>
+    #petitions .title {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var d = [
+      {
+        name: 'Jose'
+      },
+      {
+        name: 'Gillian'
+      }
+    ];
+
+    var $list = $('<ul class="names">').appendTo('body');
+    $('<ul class="names">').appendTo('body');
+    $('<ul class="names">').appendTo('body');
+    $('<ul class="names">').appendTo('body');
+    $('<ul class="names">').appendTo('body');
+    $('<ul class="names">').appendTo('body');
+
+
+    for (var j = 0; j < d.length; j++) {
+      $('<li class="name">' + d[j].name + '</li>').appendTo('.names');
+    }
+
+    $('<div id="petitions">').appendTo('body');
+
+    var results = petitions.results;
+
+    for (var k = 0; k < results.length; k++) {
+      var $item = $('<div class="item"></div>').appendTo('#petitions');
+      $('<h2 class="title">' + results[k].title  +'</h2>').appendTo($item);
+      $('<div class="created">' + results[k].created  +'</div>').appendTo($item);
+      $('<div class="content">' + results[k].body  +'</div>').appendTo($item);
+    }
+
+
+  </script>
+</body>
+</html>

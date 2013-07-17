@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSS image detail viewer example</title>
+  <meta charset="utf-8" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <style>
+    .wrapper {
+      margin: 0 auto;
+      width: 960px;
+    }
+    .tile {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      float: left;
+      outline: 1px dotted red;
+      padding: 5px;
+      width: 33.3333%;
+    }
+    .tile {
+      position: relative;
+    }
+    .tile img {
+      display: block;
+    }
+    .tile dl {
+      background-color: rgba(0, 0, 0, 0.75);
+      bottom: -100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      color: white;
+      left: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+      opacity: 0;
+      padding: 10px;
+      position: absolute;
+      width: 100%;
+    }
+
+    .tile.active dl {
+      bottom: 0;
+      opacity: 1;
+    }
+
+    /* Do something with hover so that the
+     * text kinda floats from below the image
+     * to over the image */
+
+  </style>
+  <script>
+    $(function () {
+      var $tiles = $('.tile');
+
+      $tiles.on('mouseenter', function (event) {
+        $(event.currentTarget).addClass('active');
+      });
+
+      $tiles.on('mouseleave', function (event) {
+        $(event.currentTarget).removeClass('active');
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="tile">
+      <img src="http://placekitten.com/320/240" width="320" height="240" />
+      <dl>
+        <dt>Title</dt>
+        <dd>Another cute cat</dd>
+        <dt>Date</dt>
+        <dd>Fairly recently</dd>
+      </dl>
+    </div>
+    <div class="tile">
+      <img src="http://placekitten.com/320/240" width="320" height="240" />
+      <dl>
+        <dt>Title</dt>
+        <dd>Another cute cat</dd>
+        <dt>Date</dt>
+        <dd>Fairly recently</dd>
+      </dl>
+    </div>
+    <div class="tile">
+      <img src="http://placekitten.com/320/240" width="320" height="240" />
+      <dl>
+        <dt>Title</dt>
+        <dd>Another cute cat</dd>
+        <dt>Date</dt>
+        <dd>Fairly recently</dd>
+      </dl>
+    </div>
+  </div>
+
+<script>
+
+</script>
+</body>
+</html>

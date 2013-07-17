@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JavaScript Exercises</title>
+    <meta charset="utf-8" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="exercise-1"></div>
+    <div id="exercise-2"></div>
+    <div id="exercise-3"></div>
+    <div id="exercise-4"></div>
+    <div id="exercise-5"></div>
+    <div id="exercise-6"></div>
+    <div id="exercise-7"></div>
+    <div id="exercise-8"></div>
+    <script>
+      (function ($) {
+        var boxOfCookies = [
+          'chocolate',
+          'oatmeal',
+          'sugar',
+          'sausalito',
+          'peanut butter'
+        ];
+        var contactInfo = {
+          'name': 'Tess Orlando',
+          'phone': '859.333.3523',
+          'address': '14 Oak St, Portland, Oregon 01025',
+          'notes': 'We met at the job fair.'
+        };
+        $(document).ready(function (event) {
+          /**
+           * (1) Print the list of cookies to the console.
+           */
+          for (var i = 0; i < boxOfCookies.length; i++) {
+            console.log(boxOfCookies[i]);
+          }
+          /**
+           * (2) Print the list of cookies in a comma-delimited string.
+           */
+          var stringOfCookies = '';
+          for (var i = 0; i < boxOfCookies.length; i++) {
+            // Add the list item to the string.
+            stringOfCookies = stringOfCookies + boxOfCookies[i] + ', ';
+          }
+          $('#exercise-1')
+          .append($('<h2>Simple string of Cookies</h2>'))
+          .append(stringOfCookies);
+          /**
+           * (3) Print the list of cookies in a comma-delimited string,
+           * but the last item should not have a comma.
+           */
+          stringOfCookies = '';
+          for (var i = 0; i < boxOfCookies.length; i++) {
+            // Add the list item to the string.
+            stringOfCookies = stringOfCookies + boxOfCookies[i];
+            if ((i + 1) < boxOfCookies.length) {
+              stringOfCookies = stringOfCookies  + ', ';
+            }
+          }
+          $('#exercise-2')
+          .append($('<h2>More complex string of Cookies</h2>'))
+          .append(stringOfCookies);
+          /**
+           * (4) Print the list of cookies in a comma-delimited string,
+           * but the last item should not have a comma.
+           */
+          stringOfCookies = '';
+          for (var i = 0; i < boxOfCookies.length; i++) {
+            if ((i + 1) === boxOfCookies.length) {
+              stringOfCookies = stringOfCookies  + 'and ';
+            }
+            // Add the list item to the string.
+            stringOfCookies = stringOfCookies + boxOfCookies[i];
+            if ((i + 1) < boxOfCookies.length) {
+              stringOfCookies = stringOfCookies  + ', ';
+            }
+          }
+          $('#exercise-3')
+          .append($('<h2>More complex string of Cookies with an "and"</h2>'))
+          .append(stringOfCookies);
+          /**
+           * (5) Print the list of cookies in an unordered list
+           */
+          var $listOfCookies = $('<ul>');
+          for (var i = 0; i < boxOfCookies.length; i++) {
+            $listOfCookies
+            .append(
+              $('<li>' + boxOfCookies[i] + '</li>')
+            );
+          }
+          $('#exercise-4')
+          .append($('<h2>List of Cookies</h2>'))
+          .append($listOfCookies);
+          /**
+           * (6) Ask the user if we have their cookie.
+           */
+          var userCookie = prompt('What cookie would you like?');
+          var response = 'Umm, I didn\'t here you.';
+          // Check if we have the user's cookie.
+          for (var i = 0; i < boxOfCookies.length; i++) {
+            if (userCookie === boxOfCookies[i]) {
+              response = 'Yes! We have ' + userCookie + ' cookies!';
+              break;
+            }
+            else {
+              response = 'No, I\'m sorry, we don\'t have <b>' + userCookie + '</b> cookies';
+            }
+          }
+          $('#exercise-5')
+          .append($('<h2>Do we have your cookie?</h2>'))
+          .append('<p>' + response + '</p>');
+          /**
+           * (7) Print the contact info object properties to the console.
+           */
+          var prop;
+          for (prop in contactInfo) {
+            if (contactInfo.hasOwnProperty(prop)) {
+              console.log(prop + ': ' + contactInfo[prop]);
+            }
+          }
+          /**
+           * (8) Print the contact information in a definition list.
+           */
+          var $info = $('<dl>');
+          for (prop in contactInfo) {
+            if (contactInfo.hasOwnProperty(prop)) {
+              $('<dt>' + prop + '</dt>')
+              .appendTo($info);
+              $('<dd>' + contactInfo[prop] + '</dd>')
+              .appendTo($info);
+            }
+          }
+          $('#exercise-6')
+          .append($('<h2>What\'s in the contactInfo object?</h2>'))
+          .append($info);
+          /**
+           * (9) Find the information that that user requests through a prompt.
+           */
+          var userRequest = prompt('What contact info would you like?');
+          response = '';
+          var foundIt = false;
+          for (prop in contactInfo) {
+            if (contactInfo.hasOwnProperty(prop) && !foundIt) {
+              if (userRequest === prop) {
+                response = '<b>' + userRequest + '</b> is ' + contactInfo[prop];
+                foundIt = true;
+              }
+              else {
+                response = 'I\'m sorry, we don\'t have info about <b>' + prop + '</b>';
+              }
+            }
+          }
+          $('#exercise-7')
+          .append($('<h2>What contact info would you like?</h2>'))
+          .append('<p>' + response + '</p>');
+        });
+      }(jQuery));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JavaScript Exercises</title>
+    <meta charset="utf-8" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="exercise-1"></div>
+    <div id="exercise-2"></div>
+    <div id="exercise-3"></div>
+    <div id="exercise-4"></div>
+    <div id="exercise-5"></div>
+    <div id="exercise-6"></div>
+    <div id="exercise-7"></div>
+    <div id="exercise-8"></div>
+    <script>
+      (function ($) {
+        var boxOfCookies = [
+          'chocolate',
+          'oatmeal',
+          'sugar',
+          'sausalito',
+          'peanut butter'
+        ];
+        var contactInfo = {
+          'name': 'Tess Orlando',
+          'phone': '859.333.3523',
+          'address': '14 Oak St, Portland, Oregon 01025',
+          'notes': 'We met at the job fair.'
+        };
+        $(document).ready(function (event) {
+          /**
+           * (1) Print the list of cookies to the console.
+           */
+
+          /**
+           * (2) Print the list of cookies in a comma-delimited string.
+           */
+
+          $('#exercise-1')
+          .append($('<h2>Simple string of Cookies</h2>'));
+          /**
+           * (3) Print the list of cookies in a comma-delimited string,
+           * but the last item should not have a comma.
+           */
+          $('#exercise-2')
+          .append($('<h2>More complex string of Cookies</h2>'));
+          /**
+           * (4) Print the list of cookies in a comma-delimited string,
+           * but the last item should not have a comma.
+           */
+          $('#exercise-3')
+          .append($('<h2>More complex string of Cookies with an "and"</h2>'));
+          /**
+           * (5) Print the list of cookies in an unordered list
+           */
+          $('#exercise-4')
+          .append($('<h2>List of Cookies</h2>'));
+          /**
+           * (6) Ask the user if we have their cookie.
+           */
+          $('#exercise-5')
+          .append($('<h2>Do we have your cookie?</h2>'));
+          /**
+           * (7) Print the contact info object properties to the console.
+           */
+
+          /**
+           * (8) Print the contact information in a definition list.
+           */
+          $('#exercise-6')
+          .append($('<h2>What\'s in the contactInfo object?</h2>'));
+          /**
+           * (9) Find the information that that user requests through a prompt.
+           */
+          $('#exercise-7')
+          .append($('<h2>What contact info would you like?</h2>'));
+        });
+      }(jQuery));
+    </script>
+  </body>
+</html>

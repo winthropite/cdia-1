@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+}
+form {
+  border: 1px solid gray;
+  box-sizing: border-box;
+  margin: 0 auto 2em;
+  padding: 1em;
+  width: 50%;
+}
+
+form.vertical label,
+form.vertical input,
+form.vertical select,
+form.vertical textarea,
+form.vertical button {
+  font-size: 1em;
+}
+form.vertical label {
+  clear: left;
+  display: block;
+  float: left;
+  margin-top: 0.1667em;
+  text-align: right;
+  width: 10em;
+}
+form.vertical > input[type="text"],
+form.vertical > input[type="password"],
+form.vertical > input[type="file"],
+form.vertical > select,
+form.vertical > textarea,
+form.vertical > .radio-group,
+form.vertical > .checkbox-group,
+form.vertical > .file-element {
+  display: block;
+  margin-bottom: 1em;
+  margin-left: 11em;
+}
+form.vertical > .actions {
+  margin-left: 11em;
+
+}
+form.vertical input[type="radio"],
+form.vertical input[type="checkbox"] {
+  margin-left: 0;
+}
+form.vertical button {
+  -moz-appearance: push-button;
+  -webkit-appearance: push-button;
+  appearance: push-button;
+}

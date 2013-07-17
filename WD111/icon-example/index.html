@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Icons</title>
+    <meta charset="utf-8" />
+    <style>
+      .icon {
+        padding-left: 16px;
+        position: relative;
+      }
+      .icon:before {
+        content: '';
+        background-color: transparent;
+        background-image: url("images/ui-icons-222222-256x240.png");
+        display: block;
+        height: 16px;
+        left: 0 ;
+        position: absolute;
+        top: 0;
+        width: 16px;
+      }
+      .icon-home:before {
+        background-position: 0 -112px;
+      }
+      .icon-edit:before {
+        background-position: -64px -112px ;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" class="icon icon-home button">Home</a>
+    <a href="#" class="icon icon-edit button">Edit</a>
+    <h1>some text</h1>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Localhost</title>
+    <meta charset="utf-8" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function getEventInfo(event) {
+        var output = $('<ul>');
+        for (var element in event) {
+             var item;
+             if (event.hasOwnProperty(element)) {
+                  output.append($('<li>' + element + "-- " + event[element] + '</li>'));
+            }
+        }
+        return output;
+      }
+
+      var appointment = {
+      	'date': 'today',
+      	'time': '3:00pm',
+      	'awesome event': 'dentist',
+      	'dinosaur': 'stegosaurus'
+      };
+      var $list = getEventInfo(appointment);
+      $('body').append($list);
+    </script>
+  </body>
+</html>

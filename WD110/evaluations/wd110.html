@@ -1,0 +1,206 @@
+<html>
+<head>
+  <title>WD110 Evaluation</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <h1>Instructions</h1>
+
+  <p>Complete all of the tasks listed below. You will edit this document directly in addition to creating a couple other files.</p>
+  <p>You may use your notes and the internet, as these things are available to you normally.</p>
+  <p>You may ask one question related to this evaluation of your instructor. Use this question wisely.</p>
+  <p>Please zip up all your files and email them to email address provided in class.</p>
+
+  <h1>Tasks</h1>
+
+  <ol>
+    <li>Add an HTML5 doctype to this document.</li>
+    <li>Add <a href="http://jquery.com/">jQuery</a> to the page. The version of jQuery on the page is ______.</li>
+    <li>Add <a href="http://jqueryui.com/">jQuery UI</a> to the page.</li>
+    <li>Create a JavaScript document called <code>main.js</code> and link it to this page.</li>
+    <li>Create a CSS document called <code>style.css</code> and link it to this page.</li>
+    <li>Change the body font of the document using a font from <a href="http://www.google.com/webfonts">Google Fonts</a></li>
+    <li>In the file <code>style.css</code>, style all <code>a</code> tags in first-level list item <code>li</code> elements (consomé, soup, etc.) in the list with the class <code>.root</code>. The items should be colored red and be italic.</li>
+    <li>In the file <code>style.css</code>, with the <code>table</code> with id <code>thanksgiving</code>, style the third column cells (the "lettuce" column) with a light green background color.</li>
+    <li>In the file <code>style.css</code>, with the <code>table</code> with id <code>thanksgiving</code>, style any hovered cell with a medium-green background color.</li>
+    <li>In the file <code>style.css</code>, with the <code>section</code> element with the class <code>.article</code>, style any <code>p</code> tags that follow an <code>h2</code> tag with a top margin of 1.5em.</li>
+    <li>Use jQuery to determine how many <code>li</code> elements there are on the page and replace this underbar with the answer: _____</li>
+    <li>In the file <code>main.js</code>, select all the elements classed with <code>.details</code> on the page and make the font of these elements <code>small</code>.</li>
+    <li>In the file <code>main.js</code>, using jQuery, with the <code>section</code> element with the class <code>.article</code>, style any tags that follow an <code>h3</code> tag with a top margin of 0.75em.</li>
+    <li>In the file <code>main.js</code>, write a function that adds together two numbers and returns the result.</li>
+    <li>In the file <code>main.js</code>, invoke your number adding function with the numbers 25 and 68. Assign the result to a variable named <code>sum</code>.</li>
+    <li>In the file <code>main.js</code>, using jQuery, print the value of the variable <code>sum</code> to the element with the id <code>output</code>.</li>
+  </ol>
+
+  <hr />
+
+  <!-- List -->
+  <ul class="root">
+    <li class="first">
+      <a href="#">consomé</a>
+    </li>
+    <li>
+      <a href="#">soup</a>
+      <ul>
+        <li class="second">
+          <a href="#">carrot</a>
+        </li>
+        <li>
+          <a href="#">tomato</a>
+          <ul>
+            <li>
+              <a href="#">celery</a>
+            </li>
+            <li>
+              <a href="#">potato</a>
+            </li>
+            <li>
+              <a href="#">curry</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">parsley</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">bouillabaisse</a>
+    </li>
+    <li>
+      <a href="#">stew</a>
+    </li>
+  </ul>
+
+  <!-- Table -->
+  <table id="thanksgiving">
+    <thead>
+      <tr>
+        <th>amaranth</th>
+        <th class="jetset">carrot</th>
+        <th class="tofurkey">lettuce</th>
+        <th>silver</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="odd">
+        <td>earthnut pea</td>
+        <td class="jetset">Mustard aubergine</td>
+        <td class="tofurkey">summer purslane</td>
+        <td>nori green</td>
+      </tr>
+      <tr class="even">
+        <td>horseradish spinach</td>
+        <td class="jetset">sweet pepper</td>
+        <td class="tofurkey">
+          <span>greens tatsoi</span>
+        </td>
+        <td>spinach bush</td>
+      </tr>
+      <tr class="odd">
+        <td>soybean pea celtuce</td>
+        <td class="jetset">garlic parsley</td>
+        <td class="tofurkey">
+          <a>black-eyed pea</a>
+        </td>
+        <td>Collard greens</td>
+      </tr>
+      <tr class="odd">
+        <td>earthnut pea</td>
+        <td class="jetset">Mustard aubergine</td>
+        <td class="tofurkey">summer purslane</td>
+        <td>nori green</td>
+      </tr>
+      <tr class="even">
+        <td>horseradish spinach</td>
+        <td class="jetset">sweet pepper</td>
+        <td class="tofurkey">
+          <span>greens tatsoi</span>
+        </td>
+        <td>spinach bush</td>
+      </tr>
+      <tr class="odd">
+        <td>soybean pea celtuce</td>
+        <td class="jetset">garlic parsley</td>
+        <td class="tofurkey">
+          <a>black-eyed pea</a>
+        </td>
+        <td>Collard greens</td>
+      </tr>
+      <tr class="odd">
+        <td>earthnut pea</td>
+        <td class="jetset">Mustard aubergine</td>
+        <td class="tofurkey">summer purslane</td>
+        <td>nori green</td>
+      </tr>
+      <tr class="even">
+        <td>horseradish spinach</td>
+        <td class="jetset">sweet pepper</td>
+        <td class="tofurkey">
+          <span>greens tatsoi</span>
+        </td>
+        <td>spinach bush</td>
+      </tr>
+      <tr class="odd">
+        <td>soybean pea celtuce</td>
+        <td class="jetset">garlic parsley</td>
+        <td class="tofurkey">
+          <a>black-eyed pea</a>
+        </td>
+        <td>Collard greens</td>
+      </tr>
+      <tr class="odd">
+        <td>earthnut pea</td>
+        <td class="jetset">Mustard aubergine</td>
+        <td class="tofurkey">summer purslane</td>
+        <td>nori green</td>
+      </tr>
+      <tr class="even">
+        <td>horseradish spinach</td>
+        <td class="jetset">sweet pepper</td>
+        <td class="tofurkey">
+          <span>greens tatsoi</span>
+        </td>
+        <td>spinach bush</td>
+      </tr>
+      <tr class="odd">
+        <td>soybean pea celtuce</td>
+        <td class="jetset">garlic parsley</td>
+        <td class="tofurkey">
+          <a>black-eyed pea</a>
+        </td>
+        <td>Collard greens</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- Articles -->
+
+  <section class="article">
+    <header>
+      <h1>Mustard courgette bitterleaf</h1>
+    </header>
+    <footer class="details">
+      <small class="copyright">beet greens</small>
+    </footer>
+    <h2>Plantain turnip garlic welsh</h2>
+    <p>onion kombu azuki bean corn garlic daikon carrot brussels </p>
+    <p>Sorrel gourd fava bean bell pepper chard taro caulie eggplant</p>
+    <h3>pepper garlic gumbo winter</h3>
+    <p>lettuce lotus root turnip <em>greens</em> gram celtuce</p>
+  </section>
+
+  <!-- Function output -->
+
+  <div>
+    <h3>Function output</h3>
+    <pre id="output"></pre>
+  </div>
+
+</body>
+</html>

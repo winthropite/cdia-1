@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Localhost</title>
+    <meta charset="utf-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="exercise-1"></div>
+    <div id="exercise-2"></div>
+    <div id="exercise-3"></div>
+    <div id="exercise-4"></div>
+    <div id="exercise-5"></div>
+    <div id="exercise-6"></div>
+    <div id="exercise-7"></div>
+    <div id="exercise-8"></div>
+    <script>
+      (function ($) {
+        window.cookies = [
+          'chocolate', // 0
+          'oatmeal', // 1
+          'sugar', // 2
+          'sausalito', // 3
+          'peanut butter' // 4
+        ];
+        var fruit = [
+          'banana',
+          'apple',
+          'kumkwat'
+        ];
+        var contactInfo = {
+          'name': 'Isabel Casariego',
+          'address': '45 Elm St',
+          'city': 'Omaha',
+          'state': 'Nebraska'
+        };
+        function listMaker (list) {
+          var $list = $('<ul>');
+          for (var i = 0; i < list.length; i++) {
+            $list.append('<li class=\"item-' + (i + 1) + '\"><span>' + list[i] + '</span></li>');
+          }
+          return $list;
+        }
+        // Let's do stuff!
+        $(document).ready(function (event) {
+          // Adding example.
+          console.log(cookies[0] + ' and ' + cookies[1] + ' and ' + cookies[2] + ' and ' + cookies[3] + ' and ' + cookies[4]);
+          // For loop
+          for (var i = 0; i < cookies.length; i++) {
+            console.log(cookies[i] + ' and ');
+          }
+          // For loop
+          console.log('-----------');
+          var output = '';
+          for (var i = 0; i < cookies.length; i++) {
+            output = output + cookies[i] + ' and ';
+          }
+          console.log(output);
+          // For
+          $('#exercise-1')
+          .append('<h2>The cookies I own.</h2>')
+          .append(listMaker(cookies));
+          // For
+          $('#exercise-2')
+          .append('<h2>The fruits I like.</h2>')
+          .append(listMaker(fruit));
+          // Create a comma-seperated list
+          output = '';
+          for (var i = 0; i < cookies.length; i++) {
+            if (i === (cookies.length - 1)) {
+              output = output + 'and' + ' ';
+            }
+            output = output + cookies[i];
+            if (i < (cookies.length - 2)) {
+              output = output + ',';
+            }
+            if (i < (cookies.length - 1)) {
+              output = output + ' ';
+            }
+          }
+          $('#exercise-3')
+          .append('<h2>A comma-delimited list of cookies.</h2>')
+          .append('<p>' + output + '</p>');
+          // Ask the user what kind of cookie they would like.
+
+          var userInput = prompt("What is your favorite cookie?");
+          var response = 'I have no idea';
+          for (var i = 0; i < cookies.length; i++) {
+            // Yes we have the cookie.
+            if (userInput === cookies[i]) {
+              response = 'Yes, we have that cookie.';
+              break;
+            }
+            // No we don\'t have the cookie.
+            else {
+              response = 'No we don\'t have the cookie.';
+            }
+          }
+
+          $('#exercise-4')
+          .append('<h2>What kind of cookie would you like?</h2>')
+          .append('<p>' + response + '</p>');
+          //
+          var $dList = $('<dl>');
+          for (var prop in contactInfo) {
+            if (contactInfo.hasOwnProperty(prop)) {
+              var $term = $('<dt>' + prop +'</dt>');
+              var $def = $('<dd>' + contactInfo[prop] + '</dd>');
+              $dList
+              .append($term)
+              .append($def);
+            }
+          }
+          $('#exercise-5')
+          .append('<h2>Contact info</h2>')
+          .append($dList);
+        });
+        //
+        // Exercise 6
+        var userInput = prompt('What would you like to know?');
+        var response = '';
+        for (var prop in contactInfo) {
+          if (contactInfo.hasOwnProperty(prop)) {
+            // The property exists.
+            if (prop === userInput) {
+              response = 'You asked for ' + userInput + '. The value is ' + contactInfo[userInput];
+              break;
+            }
+            // The property doesn't exist.
+            if (true) {
+              response = 'Sorry, I don\'t know what you want.';
+            }
+          }
+        }
+        $('#exercise-6')
+        .append('<h2>Retrieving contact info.</h2>')
+        .append(response);
+      }(jQuery));
+    </script>
+  </body>
+</html>
