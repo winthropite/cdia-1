@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <title>Basic plugin</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+
+  <div id="box"></div>
+  <ul>
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+  </ul>
+
+  <div id="item-1"></div>
+  <div id="item-2"></div>
+  <div id="item-3"></div>
+  <div id="item-4"></div>
+
+  <script>
+    $(function () {
+      $('#box').text('hi');
+
+      // pssst, it's kinda like $.fn.text().
+      $.fn.junkText = function (words) {
+        this.text(words);
+        return this;
+      };
+
+      // let's change the color.
+      $.fn.textColor = function (color) {
+        this.css('color', color);
+        return this;
+      };
+
+      $.fn.textSize = function (size) {
+        return this.css('font-size', size);
+      };
+
+      // Change the font size to whatever value the user wants.
+
+      // Put junk text in all list items.
+      $('li').junkText('waffle cone');
+      // Put text in each one of the example divs.
+      $('#item-1').junkText('pizza').textColor('red');
+      $('#item-2').junkText('candy corn').textColor('blue');
+      $('#item-3').junkText('swedish fish').textColor('green');
+      $('#item-4').junkText('mike & ikes').textColor('salmon');
+    });
+  </script>
+</body>
+</html>
