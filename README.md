@@ -333,3 +333,4 @@ A photo gallery plugin that scatters photos like they would when strewn on a sur
 + http://api.jquery.com
 + http://jqfundamentals.com/
 + http://jqfundamentals.com/chapter/javascript-basics
++ http://net.tutsplus.com/tutorials/javascript-ajax/required-javascript-reading/
