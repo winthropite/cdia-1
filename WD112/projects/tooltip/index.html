@@ -21,8 +21,17 @@
     // (1) Add a class of .tooltip-anchor to the element
     // that contains the data-tooltip attribute.
 
+    $tips.addClass('tooltip-anchor');
+
     // (2) Add a class .tooltip-hint to the text of the tip
     // associated with the .tooltip
+
+    $tips.each(function (index, element) {
+      var $tip = $(element);
+      var id = $tip.data('tooltip');
+      var $hint = $('#' + id);
+      $hint.addClass('tooltip-hint');
+    });
 
     // (3) Add some markup, a .tooltip-trigger. This will
     // be the element that toggles the visibility
