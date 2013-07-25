@@ -1,0 +1,32 @@
+.bootstrapper-processed {
+  display: none;
+}
+
+/* Tablet */
+@media (min-width: 500px) {
+  .bootstrapper button {
+    display: none;
+  }
+  .bootstrapper-processed {
+    display: block !important;
+  }
+  .bootstrapper-menu li {
+    float: left;
+    width: 20%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 700px) {
+  .bootstrapper-menu li {
+    width: auto;
+  }
+}
+/* Desktop */
+.bootstrapper-clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+

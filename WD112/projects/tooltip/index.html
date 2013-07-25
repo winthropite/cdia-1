@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>Tooltip plugin</title>
+  <meta charset="utf-8" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <style>
+
+  </style>
+</head>
+<body>
+
+<!-- tooltip-anchor -->
+<p data-tooltip="tip-1">"No," replied Fix coldly, "I think him a rascal</p>
+<!-- tooltip-hint -->
+<small id="tip-1">Sh! don't budge, and let me speak.  As long as Mr. Fogg was on English ground, it was for my interest to detain him there until my warrant of arrest arrived.  I did everything I could to keep him back.  I sent the Bombay priests after him, I got you intoxicated at Hong Kong, I separated you from him, and I made him miss the Yokohama steamer."</small>
+
+<script>
+  $(function () {
+    var $tips = $('[data-tooltip]');
+
+    // (1) Add a class of .tooltip-anchor to the element
+    // that contains the data-tooltip attribute.
+
+    // (2) Add a class .tooltip-hint to the text of the tip
+    // associated with the .tooltip
+
+    // (3) Add some markup, a .tooltip-trigger. This will
+    // be the element that toggles the visibility
+    // of the .tooltip-hint. Time will tell if this is
+    // toggled on hover or click.
+
+    // (4) On activation of the .tooltip-trigger, show the
+    // the .tooltip-hint element and position it
+    // in relation to the .tooltip-trigger.
+
+    // (5) On deactivation of the .tooltip-trigger, hide
+    // the .tooltip-hint.
+  });
+</script>
+</body>
+</html>
