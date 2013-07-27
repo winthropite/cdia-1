@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JavaScript Exercises</title>
+    <meta charset="utf-8" />
+    <style>
+
+      * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body *:not(script):not(span) {
+        display: block;
+        margin-top: 2em;
+      }
+
+      body {
+        margin: 2em;
+      }
+      #mousebox {
+        background-color: teal;
+        color: white;
+        height: 76px;
+        padding: 4px;
+        width: 123px;
+      }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <h2>Key presses</h2>
+
+    <input id="press-trigger" placeholder="Enter sample text" />
+
+    <ul>
+      <li>Number press: <span id="key-number-pressed">&lt;uknown&gt;</span></li>
+      <li>Alpha (lowercase) press: <span id="key-alpha-lowercase-pressed">&lt;uknown&gt;</span></li>
+      <li>Alpha (uppercase) press: <span id="key-alpha-uppercase-pressed">&lt;uknown&gt;</span></li>
+      <li>Non-alphanumeric press: <span id="key-non-alphanumeric-pressed">&lt;uknown&gt;</span></li>
+    </ul>
+
+    <h2>The mouse</h2>
+
+    <a id="click-trigger" href="#">This link is for clickin'</a>
+
+    <div id="mousebox">hover box</div>
+
+    <script>
+      (function ($) {
+        $(document).ready(function (event) {
+          /**
+           * Use the #click-trigger element to capture click events.
+           *
+           * (1) Create a handler for click events.
+           */
+
+          /**
+           * Use the #press-trigger element to capture key press events.
+           *
+           * (2) Create a handler for key events.
+           */
+
+          /**
+           * (3) Create a handler for number (0-9) key events.
+           * (3a) Print the pressed key value to #key-number-pressed.
+           */
+
+          /**
+           * (4) Create a handler for alphabetic (lowercase, a-z) key events.
+           * (4a) Print the pressed key value to #key-alpha-lowercase-pressed.
+           */
+
+          /**
+           * (5) Create a handler for alphabetic (uppercase, A-Z) key events.
+           * (5a) Print the pressed key value to #key-alpha-uppercase-pressed.
+           */
+
+          /**
+           * (6) Create a handler for non-alphanumeric (!a-zA-Z0-9) key events.
+           * (6a) Print the pressed key value to #key-non-alphanumeric-pressed.
+           */
+
+          /**
+           * Use the #mousebox element to capture mouse events.
+           *
+           * (7) Create a handler for hover (mouseenter & mouseleave) events.
+           * (7a) Change the background color of #mousebox on mouseenter. Return
+           *  the box to its original color on mouseleave.
+           */
+
+          /**
+           * (8) Create a handler for mousemove events on the document.
+           * (8a) Print the x and y values of the mouse as the text value of
+           *  the #mousebox.
+           */
+
+
+        });
+      }(jQuery));
+    </script>
+  </body>
+</html>
