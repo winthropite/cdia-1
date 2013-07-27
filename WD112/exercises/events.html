@@ -56,31 +56,91 @@
            * (1) Create a handler for click events.
            */
 
+          $('#click-trigger').on('click', function (event) {
+            console.log(event.currentTarget);
+          });
+
           /**
            * Use the #press-trigger element to capture key press events.
            *
            * (2) Create a handler for key events.
            */
 
+          $('#press-trigger').on('keypress', function (event) {
+            console.log(event);
+          });
+
           /**
            * (3) Create a handler for number (0-9) key events.
            * (3a) Print the pressed key value to #key-number-pressed.
+           *
+           * 0 - 48
+           * 9 - 57
            */
+
+          $('#press-trigger').on('keypress', function (event) {
+            var keyCode = event.keyCode;
+            var $output = $('#key-number-pressed');
+
+            // 0 == 48, 9 == 57
+            if (keyCode >= 48 && keyCode <= 57 ) {
+              // Subtract the keyCode offset of 48
+              // to get the printed value of the number.
+              var printedValue =  keyCode - 48;
+              $output.text(printedValue);
+            }
+          });
 
           /**
            * (4) Create a handler for alphabetic (lowercase, a-z) key events.
            * (4a) Print the pressed key value to #key-alpha-lowercase-pressed.
            */
 
+          $('#press-trigger').on('keypress', function (event) {
+            var alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+            var keyCode = event.keyCode;
+            var $output = $('#key-alpha-lowercase-pressed');
+
+            // a == 97, z == 122
+            if (keyCode >= 97 && keyCode <= 122) {
+              var letter = alpha[keyCode - 97];
+              $output.text(letter);
+            }
+          });
+
           /**
            * (5) Create a handler for alphabetic (uppercase, A-Z) key events.
            * (5a) Print the pressed key value to #key-alpha-uppercase-pressed.
            */
 
+          $('#press-trigger').on('keypress', function (event) {
+            var alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+            var keyCode = event.keyCode;
+            var $output = $('#key-alpha-uppercase-pressed');
+
+            // A == 65, Z == 90
+            var letter = alpha[keyCode - 65];
+            $output.text(letter);
+          });
+
           /**
            * (6) Create a handler for non-alphanumeric (!a-zA-Z0-9) key events.
            * (6a) Print the pressed key value to #key-non-alphanumeric-pressed.
            */
+
+          $('#press-trigger').on('keypress', function (event) {
+            var k = event.keyCode;
+            var $output = $('#key-non-alphanumeric-pressed');
+
+            if ((k >= 32 && k <= 47) || (k >= 58 && k <= 64) || (k >= 91 && k <= 96) || k >= 123) {
+              // HTML element codes match the keyCode integers, so by concatenating
+              // '&#' to the keyCode and printing it as HTML, we can get the
+              // character that was typed. This solution will work for the
+              // three previous problems as well, eliminating the need for arrays
+              // of alphabet characters.
+              $output.html('&#' + k);
+            }
+          });
 
           /**
            * Use the #mousebox element to capture mouse events.
@@ -90,12 +150,30 @@
            *  the box to its original color on mouseleave.
            */
 
+          $('#mousebox').on('mouseenter mouseleave', function (event) {
+            var $box = $(event.currentTarget);
+            var color;
+            if (event.type === 'mouseenter') {
+              color = $box.css('background-color');
+              $box.data('color', color);
+              $box.css('background-color', 'red');
+            }
+            else {
+              color = $box.data('color');
+              if (color) {
+                $box.css('background-color', color);
+              }
+            }
+          });
+
           /**
            * (8) Create a handler for mousemove events on the document.
            * (8a) Print the x and y values of the mouse as the text value of
            *  the #mousebox.
            */
-
+          $(document).on('mousemove', function (event) {
+            $('#mousebox').html('<span>X: ' + event.pageX + ', Y: ' + event.pageY + '</span>');
+          });
 
         });
       }(jQuery));
