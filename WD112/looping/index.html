@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>Looping</title>
+  <meta charset="utf-8" />
+  <script>
+    // {} - Object
+    // [] - Array
+    var fruit = [
+      32,
+      'rotten',
+      ['pineapple', 'starfruit'],// tropical
+      ['apple', 'plum', 'cherry'], // domestic
+      ['carrot', 'celery'], // boring
+      {
+        'species': 'dog',
+        'breed': 'dachshund',
+        'age': 2,
+        'temperment': 'grouchy'
+      }
+    ];
+
+    // Print the items in the
+    // array to the console.
+    function looper (items) {
+      for (var i = 0; i < items.length; i++) {
+        var basket = items[i];
+        if (typeof basket === 'string' || typeof basket === 'number') {
+          console.log(basket);
+        }
+        // array
+        else if (basket.length) {
+          for (var k = 0; k < basket.length; k++) {
+            console.log(basket[k]);
+          }
+        }
+        // object
+        else {
+          for (var prop in basket) {
+            // animal['age']
+            console.log(prop + ': ' + basket[prop]);
+          }
+        }
+      }
+    }
+    // Print out all the items in an array.
+
+    looper(fruit);
+
+  </script>
+</head>
+  <body>
+
+  </body>
+</html>
