@@ -1,0 +1,10 @@
+.tooltip-hint {
+  display: none;
+  position: absolute;
+}
+.tooltip-trigger {
+  position: relative;
+}
+.tooltip-hint.active {
+  display: block;
+}
