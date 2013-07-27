@@ -1,4 +1,13 @@
-jQuery.fn.bootstrapper = function () {
+jQuery.fn.bootstrapper = function (opts) {
+    // Process the options.
+    var defaults = {
+      'expand': 'Expand',
+      'collapse': 'Collapse',
+      'extraClass': ''
+    };
+
+    var options = $.extend(defaults, opts);
+
     // This variable exists at the top-most scope of our plugin function.
     var $root;
     // Process menus; mark as processed; add expand button.
@@ -6,11 +15,11 @@ jQuery.fn.bootstrapper = function () {
       // Use the .bootstrap-menu class for theme styling.
       $menu.addClass('bootstrapper-processed bootstrapper-menu bootstrapper-clearfix');
       // Wrap the menu.
-      $menu.wrap('<div class="bootstrapper"></div>');
+      $menu.wrap('<div class="bootstrapper ' + options.extraClass + '"></div>');
       // Assign the value of $root, which is declared above.
       $root = $menu.parent();
       // Insert a button into our expando plugin.
-      $root.prepend('<button>Expand</button>');
+      $root.prepend('<button>' + options.expand + '</button>');
     }
     // Save a reference to the menus.
     var $menu = this;
@@ -27,12 +36,12 @@ jQuery.fn.bootstrapper = function () {
       if (isOpen) {
         $menu.removeClass('open');
         $menu.slideUp();
-        $button.text('Expand');
+        $button.text(options.expand);
       }
       else {
         $menu.addClass('open');
         $menu.slideDown();
-        $button.text('Collapse');
+        $button.text(options.collapse);
       }
     });
 

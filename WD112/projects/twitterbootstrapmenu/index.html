@@ -5,7 +5,6 @@
   <meta charset="utf-8" />
   <link href="bootstrapper/jquery.bootstrapper.css" rel="stylesheet" />
   <link href="bootstrapper/jquery.bootstrapper.theme.css" rel="stylesheet" />
-  <link href="assets/style.css" rel="stylesheet" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="bootstrapper/jquery.bootstrapper.js"></script>
   <style>
@@ -128,7 +127,10 @@
 
 <script>
   $(function () {
-    $('.cookie').bootstrapper();
+    $('.cookie').bootstrapper({
+      'collapse': 'Close',
+      'extraClass': 'bidepal'
+    });
   });
 </script>
 </body>
