@@ -2,10 +2,11 @@
 <head>
   <title>Tooltip plugin</title>
   <meta charset="utf-8" />
+  <link href="tooltip/jquery.tooltip.css" rel="stylesheet" />
+  <link href="tooltip/jquery.tooltip.theme.css" rel="stylesheet" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <style>
-
-  </style>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="tooltip/jquery.tooltip.js"></script>
 </head>
 <body>
 
@@ -31,52 +32,10 @@
 <small id="tip-5">Sh! don't budge, and let me speak.  As long as Mr. Fogg was on English ground, it was for my interest to detain him there until my warrant of arrest arrived.  I did everything I could to keep him back.  I sent the Bombay priests after him, I got you intoxicated at Hong Kong, I separated you from him, and I made him miss the Yokohama steamer."</small>
 
 <script>
+
   $(function () {
-    var $tips = $('[data-tooltip]');
-
-    // (1) Add a class of .tooltip-anchor to the element
-    // that contains the data-tooltip attribute.
-
-    $tips.addClass('tooltip-anchor');
-
-    // (2) Add a class .tooltip-hint to the text of the tip
-    // associated with the .tooltip
-
-    $tips.each(function (index, element) {
-      var $tip = $(element);
-      var id = $tip.data('tooltip');
-      var $hint = $('#' + id);
-      $hint.addClass('tooltip-hint');
-    });
-
-    // (3) Add some markup, a .tooltip-trigger. This will
-    // be the element that toggles the visibility
-    // of the .tooltip-hint. Time will tell if this is
-    // toggled on hover or click.
-
-    var $trigger = $('<span class="tooltip-trigger">More info</span>');
-    var $widgets = $tips
-      .wrap('<div class="tooltip"></div>')
-      .parent();
-    $widgets.append($trigger);
-
-    // (4) Move the .tooltip-hints inside the $widget wrapper
-    // for each .tooltip-anchor.
-
-    $tips.each(function (index, element) {
-      var $tip = $(element);
-      var id = $tip.data('tooltip'); // 'tip-1'
-      var $hint = $('#' + id); // #tip-1
-      var $widget = $tip.parent();
-      $widget.append($hint);
-    });
-
-    // (5) On activation of the .tooltip-trigger, show the
-    // the .tooltip-hint element and position it
-    // in relation to the .tooltip-trigger.
-
-    // (6) On deactivation of the .tooltip-trigger, hide
-    // the .tooltip-hint.
+    // Invoke the tooltip plugin.
+    $('[data-tooltip]').tooltip();
   });
 </script>
 </body>
