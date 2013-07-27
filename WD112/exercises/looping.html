@@ -34,27 +34,70 @@
            * (1) Print the list of cookies to the console.
            */
 
+          for (var i = 0; i < boxOfCookies.length; i++) {
+            console.log(boxOfCookies[i]);
+          }
+
           /**
            * (2) Print the list of cookies in a comma-delimited string.
            */
 
+          var cookieList = '';
+
+          for (var i = 0; i < boxOfCookies.length; i++) {
+            cookieList = cookieList + boxOfCookies[i] + ', ';
+          }
+
           $('#exercise-1')
-          .append($('<h2>Simple string of Cookies</h2>'));
+          .append($('<h2>Simple string of Cookies</h2>'))
+          .append('<p>' + cookieList + '</p>');
           /**
            * (3) Print the list of cookies in a comma-delimited string,
            * but the last item should not have a comma.
            */
+
+          var cookieList = '';
+
+          for (var i = 0; i < boxOfCookies.length; i++) {
+            console.log(i, boxOfCookies[i]);
+            cookieList = cookieList + boxOfCookies[i];
+            if (i !== 4) {
+              cookieList = cookieList + ', ';
+            }
+          }
           $('#exercise-2')
-          .append($('<h2>More complex string of Cookies</h2>'));
+          .append($('<h2>More complex string of Cookies</h2>'))
+          .append('<p>' + cookieList + '</p>');
           /**
            * (4) Print the list of cookies in a comma-delimited string,
-           * but the last item should not have a comma.
+           * but the last item should not have a comma and the last item
+           * should be preceded by 'and'.
            */
+
+          var cookieList = '';
+
+          for (var i = 0; i < boxOfCookies.length; i++) {
+            // Do I need and ?
+            if (i === 4) {
+              cookieList = cookieList + ' and ';
+            }
+            // Cookie name.
+            cookieList = cookieList + boxOfCookies[i];
+            // Do I need a comma?
+            if (i !== 3 && i !== 4) {
+              cookieList = cookieList + ', ';
+            }
+          }
+
           $('#exercise-3')
-          .append($('<h2>More complex string of Cookies with an "and"</h2>'));
+          .append($('<h2>More complex string of Cookies with an "and"</h2>'))
+          .append('<p>' + cookieList + '</p>');
           /**
            * (5) Print the list of cookies in an unordered list
            */
+
+          var $ul = $('<ul>');
+
           $('#exercise-4')
           .append($('<h2>List of Cookies</h2>'));
           /**
