@@ -13,6 +13,22 @@
 <p data-tooltip="tip-1">"No," replied Fix coldly, "I think him a rascal</p>
 <!-- tooltip-hint -->
 <small id="tip-1">Sh! don't budge, and let me speak.  As long as Mr. Fogg was on English ground, it was for my interest to detain him there until my warrant of arrest arrived.  I did everything I could to keep him back.  I sent the Bombay priests after him, I got you intoxicated at Hong Kong, I separated you from him, and I made him miss the Yokohama steamer."</small>
+<!-- tooltip-anchor -->
+<p data-tooltip="tip-2">"No," replied Fix coldly, "I think him a rascal</p>
+<!-- tooltip-hint -->
+<small id="tip-2">Sh! don't budge, and let me speak.  As long as Mr. Fogg was on English ground, it was for my interest to detain him there until my warrant of arrest arrived.  I did everything I could to keep him back.  I sent the Bombay priests after him, I got you intoxicated at Hong Kong, I separated you from him, and I made him miss the Yokohama steamer."</small>
+<!-- tooltip-anchor -->
+<p data-tooltip="tip-3">"No," replied Fix coldly, "I think him a rascal</p>
+<!-- tooltip-hint -->
+<small id="tip-3">Sh! don't budge, and let me speak.  As long as Mr. Fogg was on English ground, it was for my interest to detain him there until my warrant of arrest arrived.  I did everything I could to keep him back.  I sent the Bombay priests after him, I got you intoxicated at Hong Kong, I separated you from him, and I made him miss the Yokohama steamer."</small>
+<!-- tooltip-anchor -->
+<p data-tooltip="tip-4">"No," replied Fix coldly, "I think him a rascal</p>
+<!-- tooltip-hint -->
+<small id="tip-4">Sh! don't budge, and let me speak.  As long as Mr. Fogg was on English ground, it was for my interest to detain him there until my warrant of arrest arrived.  I did everything I could to keep him back.  I sent the Bombay priests after him, I got you intoxicated at Hong Kong, I separated you from him, and I made him miss the Yokohama steamer."</small>
+<!-- tooltip-anchor -->
+<p data-tooltip="tip-5">"No," replied Fix coldly, "I think him a rascal</p>
+<!-- tooltip-hint -->
+<small id="tip-5">Sh! don't budge, and let me speak.  As long as Mr. Fogg was on English ground, it was for my interest to detain him there until my warrant of arrest arrived.  I did everything I could to keep him back.  I sent the Bombay priests after him, I got you intoxicated at Hong Kong, I separated you from him, and I made him miss the Yokohama steamer."</small>
 
 <script>
   $(function () {
@@ -38,11 +54,28 @@
     // of the .tooltip-hint. Time will tell if this is
     // toggled on hover or click.
 
-    // (4) On activation of the .tooltip-trigger, show the
+    var $trigger = $('<span class="tooltip-trigger">More info</span>');
+    var $widgets = $tips
+      .wrap('<div class="tooltip"></div>')
+      .parent();
+    $widgets.append($trigger);
+
+    // (4) Move the .tooltip-hints inside the $widget wrapper
+    // for each .tooltip-anchor.
+
+    $tips.each(function (index, element) {
+      var $tip = $(element);
+      var id = $tip.data('tooltip'); // 'tip-1'
+      var $hint = $('#' + id); // #tip-1
+      var $widget = $tip.parent();
+      $widget.append($hint);
+    });
+
+    // (5) On activation of the .tooltip-trigger, show the
     // the .tooltip-hint element and position it
     // in relation to the .tooltip-trigger.
 
-    // (5) On deactivation of the .tooltip-trigger, hide
+    // (6) On deactivation of the .tooltip-trigger, hide
     // the .tooltip-hint.
   });
 </script>
