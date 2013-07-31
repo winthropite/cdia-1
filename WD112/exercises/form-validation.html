@@ -1,0 +1,142 @@
+<html>
+<head>
+  <title>Form validation</title>
+  <meta charset="utf-8" />
+  <style>
+    input,
+    label,
+    select,
+    textarea {
+      display: block;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+      clear: left;
+      float: left;
+    }
+    input[type="radio"] {
+      margin-bottom: 0;
+      margin-top: 0.08887em;
+    }
+  </style>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+
+  <form action="path/to/some/script.php">
+    <input />
+    <label for="rainbow">Rainbows</label>
+    <input id="rainbow" type="text" placeholder="magically delicious" />
+    <label for="gimmegimme">Upload something</label>
+    <input id="gimmegimme" type="file" />
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" required />
+    <input id="cities-phoenix" type="checkbox" value="Phoenix" name="cities" />
+    <label for="cities-phoenix">Phoenix</label>
+    <input id="cities-austin" type="checkbox" value="Austin" name="cities" checked="checked" disabled="disabled" />
+    <label for="cities-austion">Austin</label>
+    <input id="cities-miami" type="checkbox" value="Miami" name="cities" />
+    <label for="cities-miami">Miama</label>
+    <input id="answer-yes" type="radio" value="yes" name="do-you-like-me-like-me" />
+    <label for="answer-yes">Yes</label>
+    <input id="answer-no" type="radio" value="no" name="do-you-like-me-like-me" />
+    <label for="answer-no">No</label>
+    <input id="answer-maybe" type="radio" value="maybe" name="do-you-like-me-like-me" />
+    <label for="answer-maybe">Maybe</label>
+    <label for="pets">Pets</label>
+    <select id="pets" name="pets">
+      <option>Cats</option>
+      <option selected>Dogs</option>
+      <option>Ferrets</option>
+      <option>Ponies</option>
+    </select>
+    <label for="thoughts">Please tell us what you are thinking</label>
+    <textarea id="thoughts" rows="4" name="thoughts"></textarea>
+    <button name="just-a-button">Click me</button>
+    <input type="submit" />
+  </form>
+
+  <h2>The JavaScript way</h2>
+  <ul id="submitted-data"></ul>
+
+  <h2>The jQuery way</h2>
+  <ul id="submitted-data-2"></ul>
+
+  <script>
+    $('form').on('submit', function (event) {
+      return;
+      var $form = $(event.currentTarget);
+      var $data = $('#submitted-data');
+      var fields = [
+        'rainbow',
+        'gimmegimme',
+        'cities-phoenix',
+        'cities-austin',
+        'cities-miami',
+        'answer-yes',
+        'answer-no',
+        'answer-maybe',
+        'pets',
+        'thoughts'];
+      var value;
+      // Helper function to loop through the fields.
+      function looper (id) {
+        var $el = $('#' + id, $form);
+        var checked = $el[0].checked;
+        if (typeof checked === 'undefined' || checked) {
+          value = $('#' + id, $form).val();
+          $data.append('<li>' + value + '</li>');
+        }
+      }
+      // Clear the list of outputted values.
+      $data.children().remove();
+      // Get the new values.
+      for (var i = 0; i < fields.length; i++) {
+        looper(fields[i]);
+      }
+
+
+
+      return false;
+    });
+
+    $('form').on('submit', function (event) {
+      return;
+      var $form = $(event.currentTarget);
+      var $data = $('#submitted-data-2');
+      var $textfields = $(':text', $form);
+      var $checkedfields = $(':checked', $form);
+      var field, value;
+
+      // Clear the list of outputted values.
+      $data.children().remove();
+
+      // Loop through the textfields.
+      $textfields.each(function (index, element) {
+        $field = $(element);
+        value = $field.val();
+        if ($field.attr('name') === 'email') {
+          var index = value.indexOf('@');
+          if (index > -1 && value[index + 1]) {
+            $data.append('<li>' + value + '</li>');
+          }
+          else {
+            $field.css('border', '1px solid red');
+          }
+        }
+      });
+
+      // Loop through the checkable fields.
+      $checkedfields.each(function (index, element) {
+        $field = $(element);
+        value = $field.val();
+        console.log(value);
+        if (value) {
+          $data.append('<li>' + value + '</li>');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
