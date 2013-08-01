@@ -53,7 +53,7 @@
         if ($input.attr('type') === 'email') {
           var index = value.indexOf('@');
           if (index > -1 && value[index + 1]) {
-            input.removeClass('invalid');
+            $input.removeClass('invalid');
             // Remove the error message.
             $input.next('.message').remove();
           }
