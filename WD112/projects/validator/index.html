@@ -11,11 +11,20 @@
       border: 2px inset red;
     }
     .message {
+      background-color: yellow;
       font-size: small;
+      opacity: 1;
+      -moz-transition: opacity 1s;
+      -webkit-transition: opacity 1s;
+      transition: opacity 1s;
+    }
+    .message.invisible {
+      opacity: 0.2;
     }
     .message.error {
       color: red;
     }
+
 
     /* (10) Style the invalid callout box so that it stands out to an end user. */
 
@@ -24,6 +33,7 @@
   </style>
   <!-- (1) Add jQuery to the page. -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script src="validator/jquery.validator.js"></script>
 </head>
 <body>
